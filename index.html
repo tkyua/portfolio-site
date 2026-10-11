@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang ="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tokuda Yuna</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#top">Tokuda Yuna</a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#works">Works</a>
+            </nav>
+        </header>
+        <main>
+            <section id="top">
+                <img src="https://cdn.pixabay.com/photo/2022/10/24/09/31/flower-7543035_1280.jpg" width="80%">
+                <h1>
+                    Tokuda Yuna<br>
+                    Portfolio
+                </h1>
+                <p id="weather-icon"> </p>
+            </section>
+            <section id="about">
+            <h3>About</h3>
+            <p>
+                德田優奈<br>
+                東京都市大学デザイン・データ科学部
+            </p>
+            <p>
+                出身地：奈良県宇陀市<br>
+                好きな食べ物：お寿司
+            </p>
+            </section>
+            <section id="works">
+                <h3>Works</h3>
+                <div class="works-controls">
+                    <select id="category">
+                        <option value="all">すべてのカテゴリ</option>
+                    </select>
+                    <select id="sort">
+                        <option value="new">新しい順</option>
+                        <option value="old">古い順</option>
+                        <option value="title">タイトル順</option>
+                    </select>
+                </div>
+                <div id="works-grid"></div>
+            </section>
+        </main>
+        <footer>
+            <span>© 2026 Tokuda Yuna</span>
+        </footer>
+        <script src="works.js"></script>
+    </body>
+</html>
+
