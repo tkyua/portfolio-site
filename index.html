@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang ="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tokuda Yuna</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#top">Tokuda Yuna</a>
+            <nav>
+                <a href="#top">Home</a>
+                <a href="#works">Works</a>
+                <a href="#about">About</a>
+            </nav>
+        </header>
+        <main>
+            <section id="top">
+                
+                <div class="hero-heading">
+                   <p class="hero-label">DESIGN & DATA SCIENCE</p>
+                <div class="hero-title-row">
+                   <h1>Yuna<br>
+                     Tokuda</h1>
+                    <p class="hero-portfolio">PORTFOLIO</p>
+                </div>
+                  
+                </div>
+
+                <div class="hero-image">
+                    <img src="./media/top.jpg">
+                </div>
+
+                <p id="weather-icon"> </p>
+            </section>
+
+            <section id="works">
+                <div class="works-heading">
+                    <h2>Works</h2>
+                    <span>制作物</span>
+                </div>
+                <div class="works-controls">
+                    <select id="category">
+                        <option value="all">すべてのカテゴリ</option>
+                    </select>
+                    <select id="sort">
+                        <option value="new">新しい順</option>
+                        <option value="old">古い順</option>
+                        <option value="title">タイトル順</option>
+                    </select>
+                </div>
+
+             <div id="works-grid"></div>
+            </section>
+
+            <section id="about">
+            <div class="about-heading">
+            <h2>About</h2>
+            <span>自己紹介</span>
+            </div>
+
+            <div class="about-layout">
+
+            <div class="about-photo">
+                <img src="./media/pann.jpg" alt="プロフィール写真">
+            </div>
+
+            <div class="about-profile">
+                <p class="about-label">DESIGN & DATA SCIENCE</p>
+                 
+                <h3>德田優奈</h3>
+                <p class="about-name-en">Yuna Tokuda</p>
+
+                <div class="about-description">
+                    <p>
+                        2006年  奈良県宇陀市生まれ<br>
+                        東京都市大学   デザイン・データ科学部に在学中<br>
+
+                        主にUXデザインやデータサイエンスを学んでいます<br>
+                        好きな食べ物はパン
+                    </p>
+                        
+                </div>
+            </div>
+        </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <span>© 2026 Tokuda Yuna</span>
+        </footer>
+        <script src="works.js"></script>
+    </body>
+</html>
+
