@@ -19,7 +19,8 @@ header {
 }
 nav {
     display: flex;
-    gap: 28px;
+    align-items: center;
+    gap: 60px;
 }
 * {box-sizing: border-box; }
 section {
@@ -111,8 +112,24 @@ nav a:hover{
 
 /* 天気　*/
 #weather-icon {
-    font-size: 60px;
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+
+     width: 76px;
+    height: 76px;
+    border-radius: 50%;
+
+    background-color: rgba(234, 234, 234, 0.4);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
     margin: 0;
+
+    z-index: 90;
 }
 
 /* ヘッダーのところの下線アニメーション */
@@ -234,7 +251,7 @@ header {
 }
 
 
-/* 写真がふわっと現れるアニメーション */
+/* 写真がふわふわする */
 .hero-image {
     animation: fadeUp 1.5s ease-out both;
 }
@@ -261,14 +278,6 @@ html {
 #works {
     scroll-margin-top: 90px;
 }
-
-/* 動きを減らす設定にも対応 */
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
-
 
 /*  WORKS */
 
@@ -380,13 +389,13 @@ html {
 }
 
 
-/* ===== ABOUT ===== */
+/*  ABOT　*/
 
 #about {
     padding: 100px 4% 130px;
 }
 
-/* WORKSと統一した見出し */
+
 .about-heading {
     display: flex;
     align-items: baseline;
@@ -498,4 +507,51 @@ html {
     .about-profile h3 {
         font-size: 24px;
     }
+}
+
+/* スマホ用のヘッダー・天気アイコン調整 */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    #weather-icon {
+        bottom: 20px;
+        right: 20px;
+        font-size: 28px;
+    }
+}
+
+/* WORKSの画像がはみ出さないようにする */
+.work-card {
+    overflow: hidden;
+}
+
+/* 画像をなめらかに拡大 */
+.work-card img {
+    transition: transform 0.6s ease;
+}
+
+/* マウスを重ねると少し拡大 */
+.work-card:hover img {
+    transform: scale(1.03);
+}
+
+/* スクロール */
+.works-heading,
+.about-heading {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* 画面に入ったら表示 */
+.works-heading.is-visible,
+.about-heading.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
